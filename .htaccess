@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+
+  # Turn Off mod_dir Redirect For Existing Directories
+  DirectorySlash Off
+
+  # Rewrite For Public Folder
+  RewriteEngine on
+  RewriteRule ^(.*)$ public/$1 [L]
+
+</IfModule>
+
+<IfModule mod_headers.c>
+    SetEnvIf Origin "https://(domain.com|subdomain.domain.com)$" REQUEST_ORIGIN=$0
+    Header add Access-Control-Allow-Origin %{REQUEST_ORIGIN}e env=REQUEST_ORIGIN
+    Header add Access-Control-Allow-Credentials: true
+    Header add Access-Control-Allow-Methods: "POST, GET, PUT, DELETE"
+    Header add Access-Control-Allow-Headers: "Content-Type, Origin, Authorization, X-Requested-With"
+</IfModule>

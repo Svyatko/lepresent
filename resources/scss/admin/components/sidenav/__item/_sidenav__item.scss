@@ -1,0 +1,23 @@
+.sidenav__item {
+  display: block;
+  width: 100%;
+  padding: 0 30px;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  &:hover {
+	background-color: rgba(84, 147, 245, 0.05);
+	text-decoration: none;
+    color: #fff;
+    margin-left: 6px;
+  }
+}

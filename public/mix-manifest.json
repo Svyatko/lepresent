@@ -1,0 +1,8 @@
+{
+    "/css/admin/compiled.min.css": "/css/admin/compiled.min.css",
+    "/css/admin/vendor.min.css": "/css/admin/vendor.min.css",
+    "/css/frontend/compiled.min.css": "/css/frontend/compiled.min.css",
+    "/css/frontend/vendor.min.css": "/css/frontend/vendor.min.css",
+    "/js/frontend/app.min.js": "/js/frontend/app.min.js",
+    "/js/admin/app.min.js": "/js/admin/app.min.js"
+}

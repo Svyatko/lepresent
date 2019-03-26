@@ -1,0 +1,51 @@
+html, body, #app {
+  height: 100%;
+}
+
+h2 {
+  color: $info-grey;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  transition: .2s;
+  color: $color-dark;
+}
+
+label {
+  font-weight: bold;
+}
+
+.table {
+
+  th, td {
+	vertical-align: middle;
+  }
+}
+
+//.upload-file {
+//  input {
+//	display: none;
+//  }
+//  label {
+//	font-weight: normal;
+//	margin-bottom: 0;
+//	padding: 6px 12px;
+//	border: 2px dashed #dfdfdf;
+//	border-radius: 4px;
+//	color: #666;
+//	cursor: pointer;
+//	transition: .2s;
+//
+//	i {
+//	  color: #777;
+//	}
+//
+//	&:hover {
+//	  background-color: #f7f7f7;
+//	}
+//  }
+//}

@@ -1,0 +1,399 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+  font-size: 12px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
+  font-size: 12px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+  font-size: 12px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #000;
+  font-size: 12px;
+}
+
+@mixin transition($props){
+  -webkit-transition: $props;
+  -moz-transition: $props;
+  -ms-transition: $props;
+  -o-transition: $props;
+  transition: $props;
+}
+
+@mixin rotate($props){
+  -webkit-transform: $props;
+  -moz-transform: $props;
+  -ms-transform: $props;
+  -o-transform: $props;
+  transform: $props;
+}
+@mixin radius($props){
+  -webkit-border-radius: $props;
+  -moz-border-radius: $props;
+  border-radius: $props;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body{
+  height: 100%;
+}
+
+label{
+  margin-bottom: 0;
+}
+
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+p{
+  margin-bottom: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a:focus,
+a:active,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus{
+  outline: none;
+}
+
+button{
+  cursor: pointer;
+}
+
+img{
+  max-width: 100%;
+}
+
+$black: #000;
+$red: #FF4D4D;
+
+
+.main_container{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.breadcrumbs{
+  ul{
+    display: flex;
+    align-items: center;
+    li{
+      &:after{
+        content: '/';
+        padding: 0 5px;
+      }
+      &:last-child{
+        &:after{
+          display: none;
+        }
+      }
+    }
+    a{
+      color: $black;
+      font-size: 12px;
+    }
+  }
+}
+
+.main_title{
+  background: $black;
+  color: #fff;
+  width: 100%;
+  display: block;
+  height: 62px;
+  line-height: 72px;
+  font-size: 28px;
+  padding: 0 15px;
+  &:hover{
+    color: #fff;
+  }
+}
+
+
+.links_to_pages{
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  .women, .man{
+    flex-basis: 49.5%;
+    padding: 300px 25px 30px;
+    .brands{
+      padding-top: 80px;
+      a{
+        color: $black;
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+  }
+  .women{
+    background: url(/img/main_women.jpg) no-repeat;
+  }
+  .man{
+    background: url(/img/main_man.jpg) no-repeat;
+  }
+}
+
+.video_block{
+  margin-top: 20px;
+  position: relative;
+  .video{
+    img{
+      width: 100%;
+    }
+  }
+  .abs_info{
+    position: absolute;
+    top: 45px;
+    left: 7.5%;
+    color: #fff;
+    max-width: 662px;
+    width: 100%;
+    .title_mini{
+      font-size: 12px;
+    }
+    .name{
+      font-size: 28px;
+      margin-top: 50px;
+    }
+    ul{
+      margin-bottom: 40px;
+      li{
+        font-size: 28px;
+        opacity: .5;
+      }
+    }
+  }
+
+
+}
+
+.collection_main{
+  padding: 0 20px;
+  .comming_soon, .last_chance, .shop_now{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 110px 0;
+    .img{
+      max-width: 570px;
+      width: 100%;
+      text-align: center;
+      flex-basis: 50%;
+    }
+    .info{
+      flex-basis: 50%;
+      .title{
+        font-size: 28px;
+      }
+      .big_text{
+        font-size: 80px;
+        line-height: 80px;
+        padding: 60px 0;
+      }
+      .subscribe{
+        font-size: 12px;
+        .input{
+          position: relative;
+          margin-top: 30px;
+          &:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(/img/icons/input_triangle.svg) no-repeat;
+            width: 5px;
+            height: 5px;
+            content: '';
+          }
+        }
+        input{
+          border: 1px solid #D8D8D8;
+          height: 32px;
+          width: 100%;
+          padding: 0 15px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+
+  .last_chance{
+    border-bottom: 0;
+    .info{
+      .last_descr{
+        font-size: 28px;
+        .title{
+          margin-bottom: 30px;
+        }
+      }
+      .main_title{
+        margin: 70px 0 30px;
+      }
+      .it{
+        font-size: 28px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .shop_now{
+    .img{
+      border: none;
+    }
+    .shop_descr{
+      ul{
+        margin: 30px 0 90px;
+      }
+      li{
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+
+
+.last_posts{
+  display: flex;
+  justify-content: space-between;
+  .post{
+    position: relative;
+    flex-basis: 49.5%;
+    .info{
+      position: absolute;
+      bottom: 30px;
+      left: 25px;
+      font-size: 28px;
+    }
+    img{
+      width: 100%;
+      height: 688px;
+    }
+  }
+}
+
+.woman_banner{
+  background: url(/img/woman_banner.jpg) no-repeat;
+  background-size: cover;
+  height: 780px;
+  padding-top: 50px;
+  ul{
+    padding-left: 20px;
+    max-width: 260px;
+  }
+  li{
+    font-size: 30px;
+  }
+}
+
+.new_in{
+  padding: 50px 0;
+  .main_container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .left{
+    flex-basis: 45%;
+    .title{
+      font-size: 28px;
+    }
+    ul{
+      margin: 30px 0 40px;
+    }
+    li{
+      font-size: 28px;
+    }
+  }
+  .right{
+    flex-basis: 45%;
+  }
+
+}
+
+footer{
+  border-top: 1px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
+  margin: 15px 0;
+  .main_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul{
+    display: flex;
+    padding: 15px 0;
+  }
+  li{
+    font-size: 12px;
+    margin-right: 15px;
+  }
+  .logo_a{
+    margin-right: 30px;
+  }
+  .follow{
+    margin: 0 10px 0 15px;
+  }
+  a{
+    color: $black;
+    @include transition(all .2s linear);
+    &:hover{
+      color: $red;
+    }
+  }
+}
+
+.cookie_message{
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%,0);
+  max-width: 1360px;
+  width: 100%;
+  background: #fff;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border: 1px solid $black;
+  .permission{
+    color: #929292;
+    a{
+      color: $black;
+      text-decoration: underline;
+      margin: 0 4px;
+    }
+  }
+}

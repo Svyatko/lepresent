@@ -1,0 +1,34 @@
+button.btn, label.btn, a.btn {
+  &.btn-primary {
+	background-color: $color-dark;
+	border-color: $color-dark;
+	color: #fff;
+  }
+
+  &.btn-outline-primary {
+	color: $color-dark;
+	border-color: $color-dark;
+	&:hover, &:not(:disabled):not(.disabled):active {
+	  background-color: $color-dark;
+	  color: #fff;
+	  border-color: $color-dark;
+	}
+	&:focus {
+	  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+	}
+  }
+}
+
+input.btn {
+  &.btn-outline-dark {
+	&:hover, &:focus, &:not(:disabled):not(.disabled):active {
+	  background-color: transparent;
+	  color: $color-dark;
+	}
+  }
+}
+
+.nav-pills .nav-link.active {
+  color: #fff;
+  background-color: $color-dark;
+}

@@ -1,0 +1,57 @@
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.h-10 {
+  height: 10% !important;
+}
+
+.w-10 {
+  width: 10% !important;
+}
+
+.form-label {
+  line-height: 21px;
+  display: block;
+  margin-bottom: 2px;
+  top: -5px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: $color-dark;
+
+  &--required {
+	&:after {
+	  content: ' *';
+	  font-weight: bold;
+	  color: $color-required;
+	}
+  }
+}
+
+.upload-file {
+  input {
+	display: none;
+  }
+  label {
+	font-weight: normal;
+	margin-bottom: 0;
+	padding: 6px 12px;
+	border: 2px dashed #dfdfdf;
+	border-radius: 4px;
+	color: #666;
+	cursor: pointer;
+	transition: .2s;
+
+	i {
+	  color: #777;
+	}
+
+	&:hover {
+	  background-color: #f7f7f7;
+	}
+  }
+}

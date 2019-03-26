@@ -1,0 +1,112 @@
+.catalogue{
+  padding: 0 20px;
+  .catalog_banner, .designer_sale_banner{
+    position: relative;
+    img{
+      width: 100%;
+    }
+    .abs_text{
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #fff;
+      font-size: 28px;
+    }
+  }
+  .top_catalog{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    .pagename{
+      font-size: 28px;
+    }
+    .center_text{
+      p{
+        font-size: 28px;
+        line-height: 32px;
+      }
+      .grey{
+        color: #DADADA;
+      }
+    }
+    .descr_wr{
+      display: flex;
+      max-width: 470px;
+      justify-content: space-between;
+      .descr{
+        font-size: 12px;
+        flex-basis: 48%;
+      }
+    }
+  }
+
+  .product_wr{
+    margin: 50px -0.5% 150px;
+    display: flex;
+    flex-wrap: wrap;
+    .bag_wr{
+      border: none !important;
+      .bag_prod{
+        border: 1px solid #B8E986;
+        &:first-child{
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .product{
+      border: 1px solid #B8E986;
+      flex-basis: 32.3%;
+      margin: 0 0.5% 30px;
+      .img{
+        width: 100%;
+        text-align: center;
+      }
+      .info{
+        padding: 10px 20px;
+        font-size: 12px;
+        .price{
+          span{
+            color: $red;
+          }
+        }
+      }
+    }
+    .four_prod_in_one, .two_prod_in_one{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border: none !important;
+      margin-top: -30px;
+      .item_no_border{
+        border: none !important;
+      }
+      .item{
+        flex-basis: 48%;
+        border: 1px solid #B8E986;
+        margin-top: 30px;
+        .img{
+          text-align: center;
+          img{
+            width: 134px;
+            height: 278px;
+          }
+        }
+        .mini_item{
+          border: 1px solid #B8E986;
+          &:last-child{
+            margin-top: 15px;
+          }
+          .img{
+            img{
+              height: 95px;
+              width: 139px;
+            }
+          }
+        }
+      }
+    }
+    .big_bag{
+      flex-basis: 65.7%;
+    }
+  }
+}

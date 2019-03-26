@@ -1,0 +1,39 @@
+@media screen and(max-width: 1455px){
+  footer{
+    padding: 0 20px;
+    li{
+      margin-right: 11px;
+    }
+  }
+}
+
+@media screen and(max-width: 1200px){
+  .links_to_pages{
+    .women, .man{
+      padding: 185px 25px 30px;
+    }
+  }
+  .collection_main .comming_soon .info .big_text{
+    font-size: 55px;
+    line-height: 55px;
+  }
+  .last_posts .post img{
+    height: auto;
+  }
+
+  footer .main_container{
+    display: block;
+    text-align: center;
+    .left_footer ul{
+      padding-bottom: 0;
+    }
+  }
+}
+
+
+
+@media screen and(max-width: 992px){
+
+}
+
+

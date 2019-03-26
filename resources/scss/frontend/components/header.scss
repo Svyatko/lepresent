@@ -1,0 +1,224 @@
+header{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a{
+    color: $black;
+    @include transition(all .2s linear);
+    &:hover{
+      color: $red;
+    }
+  }
+  .left{
+    display: flex;
+    align-items: center;
+    .logo{
+      margin-right: 5px;
+      img{
+        width: 108px;
+        height: 8px;
+      }
+    }
+    .select_sect{
+      display: flex;
+      align-items: center;
+      li{
+        margin-left: 15px;
+      }
+    }
+  }
+  .navigation_main{
+    display: flex;
+    align-items: center;
+    .other_links{
+      display: flex;
+      align-items: center;
+      li{
+        margin-right: 15px;
+      }
+    }
+    .dropdown_menu{
+      position: relative;
+      @include transition(all .2s linear);
+      &:hover{
+        .droped_down{
+          display: block;
+        }
+      }
+      .droped_down{
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        background: #fff;
+        width: 210px;
+        padding: 20px 20px 15px;
+        ul{
+          margin-bottom: 20px;
+        }
+        img{
+          margin: 10px 0 15px;
+          width: 100%;
+        }
+        .name{
+          width: 70%;
+        }
+      }
+    }
+  }
+  .gender, .multilanguage, .sort, .filter{
+    margin: 0 20px;
+    position: relative;
+    img{
+      width: 5.3px;
+      height: 4px;
+    }
+    .dropdown{
+      border: 1px solid #E4E4E4;
+      background: #fff;
+      display: none;
+      position: absolute;
+      top: 24px;
+      text-align: center;
+      left: 50%;
+      transform: translate(-40%, 0);
+      width: 40px;
+    }
+    a:hover{
+      color: $black;
+    }
+    .active{
+      opacity: .5;
+      img{
+        opacity: .5;
+        @include rotate(rotate(180deg));
+      }
+    }
+  }
+
+  .gender{
+    .dropdown{
+      width: 64px;
+      padding: 10px 0;
+    }
+  }
+
+
+  .center{
+    display: flex;
+    align-items: center;
+  }
+
+  .sort{
+    .dropdown{
+      width: 138px;
+      text-align: left;
+      padding: 20px 15px;
+      a{
+        font-size: 12px;
+        display: block;
+        &:first-child{
+          padding-bottom: 10px;
+        }
+        &:last-child{
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+
+  .filter{
+    .filter_wr{
+      display: flex;
+      justify-content: space-between;
+    }
+    .dropdown{
+      width: 630px;
+      border: 1px solid #E4E4E4;
+      text-align: left;
+      padding: 20px 10px;
+      .title{
+        padding-bottom: 15px;
+      }
+      .marg_top{
+        margin-top: 30px;
+      }
+      a{
+        font-size: 12px;
+        display: block;
+        color: #9B9B9B;
+        line-height: 16px;
+        @include transition(all .2s linear);
+        &:hover{
+          color: $black;
+        }
+      }
+      .active{
+        position: relative;
+        opacity: 1;
+        &:before{
+          content: '';
+          width: 4px;
+          height: 4px;
+          position: absolute;
+          top: 50%;
+          margin-top: -2px;
+          left: -8px;
+          display: block;
+          background: #000;
+          @include radius(50%);
+        }
+        a{
+          color: #000;
+        }
+      }
+    }
+
+  }
+
+  .right{
+    display: flex;
+    align-items: center;
+    .multilanguage{
+      margin: 0 20px;
+      position: relative;
+      img{
+        width: 5.3px;
+        height: 4px;
+      }
+      .dropdown{
+        background: #fff;
+        display: none;
+        position: absolute;
+        top: 24px;
+        text-align: center;
+        left: 50%;
+        transform: translate(-40%, 0);
+        width: 56px;
+        padding: 10px 0;
+        a{
+          display: block;
+        }
+      }
+      a:hover{
+        color: $black;
+      }
+      .active{
+        opacity: .5;
+        img{
+          opacity: .5;
+          @include rotate(rotate(180deg));
+        }
+      }
+    }
+    .login{
+      margin-right: 5px;
+      img{
+        width: 6px;
+        height: 11px;
+      }
+    }
+  }
+
+}
